@@ -1,0 +1,460 @@
+@charset "utf-8";
+
+
+/*css reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, blockquote, textarea, p, th, td, table {
+	margin: 0;
+	padding: 0;
+}
+table {
+	border-collapse:collapse;
+}
+button {
+	cursor: pointer;
+}
+fieldset {
+	border:0;
+}
+ul, ol {
+	list-style-type: none;
+}
+
+img {
+	border: 0 none;
+	margin: 0px;
+	padding: 0px;
+}
+address, caption, cite, code, dfn, em, th, var {
+	font-style:normal;
+	font-weight:normal;
+}
+
+caption, th {
+	text-align:left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+p {
+	text-align:left;
+}
+i, cite, em {
+	font-style:normal;
+	font-weight:normal;
+}
+abbr, acronym {
+	border:0;
+}
+a {
+	text-decoration:none;
+	color:#000;
+}
+body {
+	font-size: 14px;
+	color: #464646;
+	font-family: "宋体","微软雅黑", Arial, Verdana,;
+	background-image: url(../images/bodyBg.png);
+}
+
+a{ 
+	blr:expression(this.onFocus=this.blur());
+	outline: none;
+	font-size: 14px;
+	color: #4b6398;
+}
+
+a:hover {
+	color:#f00;
+	}
+/* 图片热点去掉点击链接时的虚线外框 */
+area {
+	blr:expression(this.onFocus=this.blur());
+} 
+/* FF去掉点击链接时的虚线外框 */
+a:focus {
+	-moz-outline-style: none; 
+}
+/*在FF浏览器下始终显示滚动条 到达不太浏览器效果一致*/
+html {
+	overflow:-moz-scrollbars-vertical;
+}
+.clear {
+	clear:both;
+}
+.f_left {
+	float:left;
+}
+.f_right {
+	float:right;
+}
+clearfix:after {
+}
+.clearfix {
+	zoom:1
+}
+.clear{
+	line-height:0;
+	height:0;
+	font-size:0;
+	clear:both;
+}
+.F06c a {
+	color:#06c;
+	
+}
+.F06c a:hover {
+	color:#f00;
+	
+}
+
+/*----------日期右对齐样式------------*/
+.dateright{
+	float: right;
+	margin-right: 5px;
+	color: #CCC;
+	font-size: 12px;
+	font-weight: normal;
+}
+.more {
+	float: right;
+	margin-right: 8px;
+	_margin-top: 8px;
+}
+/*----分页样式------*/
+.page{
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+}
+
+/*-------------------------头部样式-------------------------------*/
+
+.wrapper {
+	margin: 0px;
+	padding: 0px;
+}
+#top {
+	background-color: #484848;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+#top .top {
+	text-align: right;
+	margin: auto;
+	height: 25px;
+	width: 1002px;
+	line-height: 25px;
+	color: #FFF;
+	font-size: 12px;
+}
+#top .top a {
+	color: #FFF;
+	font-size: 12px;
+}
+#top .top a:hover {
+	color: #F30;
+	font-size: 12px;
+}
+#header {
+	height: 60px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+}
+#header .header {
+	margin: auto;
+	height: 60px;
+	width: 1002px;
+}
+#header .header .logo {
+	height: 60px;
+	width: 163px;
+}
+#mainNav {
+	height: 51px;
+	background-image: url(../images/navBg.png);
+	background-repeat: repeat-x;
+}
+#mainNav .mainNav {
+	margin: auto;
+	width: 1002px;
+	height: 46px;
+}
+#nav {
+}
+#nav .mainlevel {	
+	float: left;
+}
+#nav .mainlevel a {
+	font-family: "宋体", "微软雅黑";
+	font-size: 14px;
+	color: #666666;
+	line-height: 46px;
+	text-align: center;
+	height: 46px;
+	width: 98px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #A6A5AA;
+	display: block;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFFFFF;
+}
+#nav .mainlevel a.ok {
+	line-height: 46px;
+	text-align: center;
+	height: 46px;
+	width: 100px;
+	display: block;
+	border-left-style: none;
+	background-image: url(../images/navok.png);
+	background-repeat: no-repeat;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	font-weight: bold;
+	color: #FFF;
+}
+#nav .mainlevel a.ok:hover {
+	background-image: url(../images/navokhover.png);
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	width: 100px;
+	height: 46px;
+}
+#nav .mainlevel a.bk {
+	font-family: "宋体", "微软雅黑";
+	font-size: 14px;
+	color: #666666;
+	line-height: 46px;
+	text-align: center;
+	height: 46px;
+	width: 98px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #A6A5AA;
+	display: block;
+	border-right-style: none;
+}
+#nav .mainlevel a:hover {
+	font-weight: bold;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #A6A5AA;
+	color: #FFF;
+	background-image: url(../images/navhover.png);
+	background-repeat: repeat-x;
+	height: 45px;
+	width: 98px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-top-color: #FAFAFC;
+	border-right-color: #FAFAFC;
+}
+#nav .mainlevel ul {
+	display: none;
+	position: absolute;
+	z-index:999;
+}
+#nav .mainlevel li {
+
+}
+#nav .mainlevel li a {
+	width: 120px;/*IE6 only*/
+	line-height: 30px;
+	background-image: url(../images/leveli.png);
+	height: 30px;
+	text-align: left;
+	padding-left: 30px;
+	font-size: 12px;
+}
+#nav .mainlevel li a:hover {
+	width: 120px;/*IE6 only*/
+	line-height: 30px;
+	background-image: url(../images/levelihover.png);
+	height: 30px;
+	text-align: left;
+	padding-left: 30px;
+	border-top-style: none;
+	color: #2DADC4;
+	font-weight: normal;
+}
+
+
+.gk {
+	height: 30px;
+	width: 1000px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	line-height: 30px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #FFFFFF;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #CCCCCC;
+}
+.gk2 {
+	height: 28px;
+	width: 978px;
+	line-height: 30px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #FFFFFF;
+}
+.gk .gkl {
+	float: left;
+	width: 470px;
+	font-size: 12px;
+	background-image: url(../images/set.gif);
+	background-repeat: no-repeat;
+	background-position: 1px center;
+	padding-left: 20px;
+}
+.gk .gkl a {
+	font-size: 12px;
+}
+.fEB6C00 {
+	font-size: 12px;
+	font-weight: bold;
+	color: #EB6C00;
+	padding-right: 10px;
+}
+.gk .gkr {
+	float: right;
+	width: 480px;
+}
+.main {
+	width: 1002px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
+}
+.ad {
+	height: 90px;
+	width: 1002px;
+	margin-bottom: 10px;
+}
+.links {
+	padding: 10px;
+	width: 982px;
+	border-top-width: 3px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #94D0F1;
+	border-right-color: #94D0F1;
+	border-bottom-color: #94D0F1;
+	border-left-color: #94D0F1;
+	margin-bottom: 10px;
+	background-color: #FFF;
+}
+.links h1 {
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: bold;
+	color: #0C96E7;
+	letter-spacing: 3px;
+	height: 22px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #CCC;
+	margin-bottom: 5px;
+}
+.links ul {
+}
+.links ul li {
+	padding: 5px;
+	line-height: 22px;
+	float: left;
+	height: 22px;
+}
+
+#footnav {
+	background-color: #FFFFFF;
+	height: 40px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	line-height: 40px;
+	text-align: center;
+	color: #666;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CCC;
+}
+#footer {
+	height: 80px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+	line-height: 25px;
+	color: #666;
+	text-align: center;
+	padding: 10px;
+
+}
+#nav {
+	display: block;
+}
+.userul {
+ 	width:100%;
+}
+.userul li {
+	font-size: 12px;
+	color: #EEEEEE;
+	float: right;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+.username {
+	background-image: url(../images/user.png);
+	background-repeat: no-repeat;
+	background-position: 1px center;
+	padding-left: 25px;
+}.huiyuan {
+	padding-right: 10px;
+	float: right;
+	display: inline-block;
+	width: 50%;
+}
+.userxiaoxi {
+	background-image: url(../images/msg.gif);
+	background-repeat: no-repeat;
+	background-position: 1px center;
+	padding-left: 25px;
+}.userout {
+	background-image: url(../images/out.png);
+	background-repeat: no-repeat;
+	background-position: 1px center;
+	padding-left: 25px;
+}

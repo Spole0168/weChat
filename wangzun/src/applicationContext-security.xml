@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:s="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.4.xsd"
+	default-lazy-init="true">
+	<!-- http安全配置 -->
+	<s:http>
+		<s:form-login login-processing-url="/SECURITY_LOGIN.action" login-page="/manager/login.action" default-target-url="/manager/main.action" always-use-default-target="true"  authentication-failure-url="/manager/login.action?error=true" />
+		<s:http-basic />
+		<s:logout logout-success-url="/manager/login.action" />
+		<s:remember-me key="21232F297A57A5A743894A0E4A801FC3" />
+	</s:http>
+	
+	<!-- 认证配置, 使用userDetailsService提供的用户信息 -->
+	<s:authentication-provider user-service-ref="userDetailsService">
+		<!-- 可设置hash使用sha1或md5散列密码后再存入数据库 -->
+		<s:password-encoder hash="sha" />
+	</s:authentication-provider>
+
+	<!-- 重新定义的FilterSecurityInterceptor, 使用resourceDetailsService提供的url-授权关系定义
+	<bean id="filterSecurityInterceptor" class="org.property.core.modules.security.springsecurity.FilterSecurityInterceptor"
+		autowire="byType">
+		<s:custom-filter before="FILTER_SECURITY_INTERCEPTOR" />
+		<property name="resourceDetailsService" ref="resourceDetailsService" />R
+	</bean>
+    -->
+	<!-- 项目实现的用户查询服务 -->
+	<bean id="userDetailsService" class="com.zhenjinzi.yzy.service.impl.security.UserDetailsServiceImpl" />
+
+	<!-- 项目实现的URL-授权查询服务 -->
+	<bean id="resourceDetailsService" class="com.zhenjinzi.yzy.service.impl.security.ResourceDetailsServiceImpl" />
+</beans>

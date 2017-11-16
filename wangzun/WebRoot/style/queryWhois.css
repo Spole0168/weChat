@@ -1,0 +1,24 @@
+@charset "utf-8";
+* {
+margin:0;
+padding:0;
+}
+#box {
+display:none;
+padding: 10px;
+position:absolute;
+width:400px;
+border:solid 2px #94D0F1;
+z-index:200;
+background:#ebf2fa;
+}
+#loading {
+display:none;
+position:absolute;
+width:170px;
+hight:20px;
+border:#f60 solid 1px;
+z-index:200;
+background:#fff;
+}
+.tip{ border-bottom:1px dashed #999; cursor:pointer;}

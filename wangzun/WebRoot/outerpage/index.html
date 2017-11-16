@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script  type="text/javascript">
+   //这个方法将使用XMLHTTPRequest对象来进行AJAX的异步数据交互  
+   var xmlHttpRequest;
+
+   function bodyOnLoad(){
+	   //alert(urlencode("http://www.h5garden.cn/yinzhiyuan/1t1y/1/"));
+	    //alert(encodeURIComponent("http://weixin.h5garden.cn/testindex/"));
+	var url=window.location.href;
+	/**获取url?code=xxx&state=yyy 中的code和state*/
+	var theRequest = new Object(); 
+     if (url.indexOf("?") != -1) { 
+        var str = url.substr(url.indexOf("?")+1); 
+        strs = str.split("&"); 
+       for(var i = 0; i < strs.length; i ++) { 
+            theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]); 
+       } 
+    } 
+   
+	var code =theRequest.code;
+	var state =theRequest.state;
+	alert("code:"+code+"  url:"+url+"   state:"+state);
+	
+    xmlHttpRequest=null;
+    if(window.XMLHttpRequest){
+        xmlHttpRequest=new XMLHttpRequest();
+    }else{
+        xmlHttpRequest=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+	if(xmlHttpRequest!=null){
+       xmlHttpRequest.open("POST","http://182.92.128.9:8780/wangzun/outeract/getopenidbycode!getOpenid.action",true);
+	   xmlHttpRequest.onreadystatechange = callback;
+	   xmlHttpRequest.setRequestHeader("Content-Type",   "application/x-www-form-urlencoded");
+	   xmlHttpRequest.send("code="+code);//
+	}
+   }
+
+    //回调函数  
+   function callback(){
+    //alert("test");//this alert will show several times when click the button.
+	alert("state:"+ xmlHttpRequest.readyState +"  status:"+xmlHttpRequest.status +" xmlHttpRequest.responseText"+xmlHttpRequest.responseText);
+    if (4==xmlHttpRequest.readyState&&200==xmlHttpRequest.status) {
+        var responseText = xmlHttpRequest.responseText;
+		alert(responseText);
+        //document.getElementById("div1").innerHTML = responseText;
+       }
+    }
+</script>
+
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+
+</head>
+<body onLoad="bodyOnLoad()">
+<label id="urlencodes"/>
+</body>
+</html>
+

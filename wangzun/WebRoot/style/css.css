@@ -1,0 +1,203 @@
+#TabTab03Con1 {
+	width: 296px;
+	padding: 10px;
+}
+#TabTab03Con2 {
+	width: 296px;
+	padding: 10px;
+}
+#TabTab03Con3 {
+	width: 296px;
+	padding: 10px;
+}
+#TabTab03Con4 {
+	width: 296px;
+	padding: 10px;
+}
+#TabTab03Con5 {
+	width: 296px;
+	padding: 10px;
+}
+#TabTab03Con6 {
+	width: 296px;
+	padding: 10px;
+}
+.xixi1 {
+	width: 316px;
+	height: 27px;
+	line-height: 27px;
+	background-image: url(../images/01.jpg);
+	cursor: pointer;
+	color: #0C96E7;
+}
+.xixi2 {
+	width: 316px;
+	height: 27px;
+	line-height: 27px;
+	background-image: url(../images/02.jpg);
+	cursor: pointer;
+	color: #0C96E7;
+}
+.xixi3 {
+	width: 316px;
+	height: 27px;
+	line-height: 27px;
+	background-image: url(../images/03.jpg);
+	cursor: pointer;
+	color: #0C96E7;
+}
+.xixi4 {
+	width: 316px;
+	height: 27px;
+	line-height: 27px;
+	background-image: url(../images/01.jpg);
+	cursor: pointer;
+	color: #0C96E7;
+}
+.xixi5 {
+	width: 316px;
+	height: 27px;
+	line-height: 27px;
+	background-image: url(../images/02.jpg);
+	cursor: pointer;
+	color: #0C96E7;
+}
+.xixi6 {
+	width: 316px;
+	height: 27px;
+	line-height: 27px;
+	background-image: url(../images/03.jpg);
+	cursor: pointer;
+	color: #0C96E7;
+}
+.tab1 {
+	width: 105px;
+	height: 27px;
+	line-height: 27px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+	color: #0C96E7;
+	font-family: "微软雅黑", "宋体";
+	font-size: 14px;
+}
+.tab2 {
+	width: 105px;
+	height: 27px;
+	line-height: 27px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	color: #0C96E7;
+	font-family: "微软雅黑", "宋体";
+	font-size: 14px;
+	font-weight: bold;
+}
+.tab3 {
+	width: 105px;
+	height: 27px;
+	line-height: 27px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	color: #0C96E7;
+	font-family: "微软雅黑", "宋体";
+	font-size: 14px;
+	font-weight: bold;
+}
+.tab4 {
+	width: 105px;
+	height: 27px;
+	line-height: 27px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+	color: #0C96E7;
+	font-family: "微软雅黑", "宋体";
+	font-size: 14px;
+}
+.tab5 {
+	width: 105px;
+	height: 27px;
+	line-height: 27px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	color: #0C96E7;
+	font-family: "微软雅黑", "宋体";
+	font-size: 14px;
+	font-weight: bold;
+}
+.tab6 {
+	width: 105px;
+	height: 27px;
+	line-height: 27px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	color: #0C96E7;
+	font-family: "微软雅黑", "宋体";
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+.newsr ul li {
+	line-height: 25px;
+	height: 25px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #CCC;
+	margin-bottom: 5px !important;
+	margin-bottom: 4px;
+}
+.newsr ul li a {
+	font-size: 14px;
+}
+
+
+.js {
+	POSITION: relative; WIDTH: 960px; HEIGHT: 315px;
+	margin:0 auto;
+}
+.jsNav {
+	BACKGROUND: url(../images/jsNav.png) no-repeat
+}
+.prevBtn {
+	BACKGROUND: url(../images/jsNav.png) no-repeat
+}
+.nextBtn {
+	BACKGROUND: url(../images/jsNav.png) no-repeat
+}
+.imgSelected {
+	BACKGROUND: url(../images/jsNav.png) no-repeat
+}
+.jsNav {
+	POSITION: absolute; WIDTH: 125px; BOTTOM: 10px; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 30px; RIGHT: 10px; FONT-WEIGHT: bold
+}
+.jsNav A {
+	TEXT-ALIGN: center; LINE-HEIGHT: 30px; WIDTH: 25px; FLOAT: left; VERTICAL-ALIGN: middle
+}
+.prevBtn {
+	DISPLAY: block; BACKGROUND-POSITION: 0px -30px; HEIGHT: 30px
+}
+.nextBtn {
+	DISPLAY: block; BACKGROUND-POSITION: -100px -30px; HEIGHT: 30px
+}
+.imgSelected {
+	BACKGROUND-POSITION: 1px -60px; COLOR: #000
+}
+
+
+#scrollDiv{
+	width: 188px;
+	min-height: 25px;
+	line-height: 25px;
+	overflow: hidden;
+	height: 110px;
+}
+#scrollDiv li{
+	height: 22px;
+}

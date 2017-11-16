@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="wangzun"
+  id="myeclipse.1338954043919"
+  context-root="/wangzun"
+  j2ee-spec="6.0"
+  archive="wangzun.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
