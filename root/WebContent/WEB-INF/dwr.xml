@@ -1,0 +1,26 @@
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN"
+    "http://directwebremoting.org/schema/*.dtd">
+<!-- 通用dwr配置 -->  
+<dwr>
+	<allow>
+        <!-- 从Spring中获取Java对象 -->  
+        <create javascript="TestHello" creator="spring">  
+            <param name="beanName" value="TestHello"></param>  
+        </create>
+	</allow>
+</dwr>
+<!-- 
+最主要的配置是<create>节点，它有两个属性 creator和javascript，creator属性设为 new ,
+表示通过 new创建对象示例,creator设为spring时，表示通过spring来创建对象示例;
+ -->
+<!-- 
+<dwr>  
+    <allow>  
+       <create javascript="TestHello" creator="new"  scope="application"> 
+			<param name="class" value="com.dwr.Hello" />
+			<include method="sayHello"/>  
+		</create>
+    </allow>  
+</dwr> 
+ -->

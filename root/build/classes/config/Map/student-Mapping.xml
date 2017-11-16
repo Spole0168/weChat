@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="student">
+	<!-- useGeneratedKeys="true" keyProperty="xxx" for sqlserver and mysql -->
+    
+    <insert id="insert" parameterType="com.shang.Bean.Student">
+        INSERT INTO
+        student (
+        	name,
+        	sex,
+        	age
+        ) VALUES (
+        	#{name,jdbcType=VARCHAR},
+        	#{sex,jdbcType=VARCHAR},
+        	#{age,jdbcType=INTEGER}
+        )
+		<!--	
+			oracle: order="BEFORE" SELECT sequenceName.nextval AS ID FROM DUAL 
+			DB2: order="BEFORE"" values nextval for sequenceName
+		<selectKey resultType="java.lang.Long" order="BEFORE" keyProperty="userId">
+			SELECT sequenceName.nextval AS ID FROM DUAL 
+        </selectKey>
+		-->
+    </insert>
+    
+    <delete id="delete" parameterType="com.shang.Bean.Student">
+        delete from student where
+        id = #{id}
+    </delete>
+    
+    <update id="update" parameterType="com.shang.Bean.Student">
+        UPDATE student SET
+	        name = #{name,jdbcType=VARCHAR},
+	        sex = #{sex,jdbcType=VARCHAR},
+	        age = #{age,jdbcType=INTEGER}
+        WHERE 
+	        id = #{id,jdbcType=INTEGER} 
+    </update>
+
+    <select id="findById" resultType="com.shang.Bean.Student" parameterType="Integer">
+		select *
+		    from student
+	        where id = #{id}
+    </select>
+	
+	 <select id="findAll" resultType="com.shang.Bean.Student">
+		select * 
+		from student
+		where 1=1
+		<if test="name != null and name != ''">
+			AND name LIKE '%'||#{name}||'%'
+		</if>
+		<if test="sex != null and sex != ''">
+			AND sex LIKE '%'||#{sex}||'%'
+		</if>
+		<if test="age != null and age != ''">
+			AND age =#{age}
+		</if>
+		
+    </select>
+	
+    <delete id="deleteByPrimaryKey" parameterType="Integer">
+        delete from student where
+        id = #{id}
+    </delete>
+</mapper>
